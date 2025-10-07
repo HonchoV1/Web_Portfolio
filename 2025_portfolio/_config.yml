@@ -1,8 +1,0 @@
-title: My Portfolio 
-name: Holden Dipietro
-email: holdendip@gmail.com
-
-collections:
-  design:
-    output: true
-    permalink: /:collection/:path/
