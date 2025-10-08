@@ -6,6 +6,8 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script src="js/fade.js" defer></script>
+<script src="js/resize.js" defer></script>
 </head>
 	
 <header class="my_header">
@@ -44,34 +46,23 @@
 	  <!-- style section with container with clickable options -->
 		<div class="style_page">
 			<div class="style_box"> 
-				<img src="img/style_box.png" alt="pink border for work styles"> 
-<!--				<img class="style_items" src="img/style_all.png" alt="all styles for example">-->
-				
-				<div class="style_items">
-					<div class="style_vector"> <h3>Vector</h3> </div>
-					<div class="style_layout"> <h3>Layouts</h3></div>
-					<div class="style_illustration"> <h3>Illustrations</h3></div>
-					<div class="style_motion"> <h3>Motion Graphics</h3></div>
-					<div class="style_photography"> <h3>Photography</h3></div>
-					<div class="style_web"> <h3>Web</h3></div>
-				</div>
-<!--
-				<div class="style_items"> 
-				<img src="img/style_vector.png" alt="vector">
-				<img src="img/style_layout.png" alt="layout">
-				<img src="img/style_illustrations.png" alt="illustrations">
-				<img src="img/style_motion.png" alt="motion">
-				<img src="img/style_photography.png" alt="photo">
-				<img src="img/style_web.png" alt="web">
+				<img src="img/style_box.png" alt="pink border for work styles" id="imagegrow"> 
+				<div class="style_items hidden">
+					<div class="style_vector">  <button> Vector </button> </div>
+					<div class="style_group">
+						<div class="style_layout"> <button> Layouts </button> </div>
+						<div class="style_illustration"> <button> Illustrations </button> </div>
 					</div>
--->
-				
-				
+					<div class="style_motion"> <button> Motion Graphics </button> </div>
+					<div class="style_photography"> <button> Photography </button> </div>
+					<div class="style_web"> <button> Web </button> </div>
+				</div>				
 			</div>
 			<img src= "img/green_background.png" alt="green background">
 		
 		</div>
   </section>
+	
 <section> <!-- about section -->
 	<div class="about_page">
 	<img src="img/main_logo.png" alt="logo">

@@ -17,8 +17,9 @@ h2{
 }
 h3{
 	font-weight: 600;
-	font-size: 30px;
+	font-size: 50px;
 	color:white;
+	text-shadow: 2px 2px 5px black;
 }
 
 h4{
@@ -75,11 +76,9 @@ footer{
 }
 .style_box{ 
 	position: absolute;
-	top: 20px;
-	left: 0;
-	right: 0;
 	padding: 90px 0px;
 	width: 100%;
+	justify-content: center;
 	
 }
 
@@ -91,27 +90,31 @@ footer{
 
 .style_items{
 	position: absolute;
-	width: 400px;
-	height: 230px;
-	display: grid;
-	
-
-	grid-template-columns: repeat(2,1fr);
-	grid-template-rows: repeat(1,1fr);
-	grid-gap: 10px;
+	top: 140%;
+	left: 60%;
+	width: 1000px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1em;
 	
 }
 
 
 .style_vector{
-	
 	width: 440px;
 	height: 344px;
-	display: grid; 
-	place-items: center;
+	display: flex; 
+	justify-content: center;
+    align-items: center;
 	background-image:url("../img/style_vector.png");
 	background-size: cover;
-	grid-row: span 2;
+}
+
+.style_group{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
 }
 .style_layout{
 	width: 504px;
@@ -124,12 +127,11 @@ footer{
 }
 .style_illustration{
 	width: 504px;
-	height: 216px;
+	height: 218px;
 	display: grid; 
 	place-items: center;
 	background-image:url("../img/style_illustrations.png");
 	background-size: cover;
-	
 	
 }
 .style_motion{
@@ -139,7 +141,6 @@ footer{
     justify-content: center;
     align-items: center;
 	background: #595959;
-	grid-column: span 2;
 	background-image:url("../img/style_motion.png");
 	background-size: cover;
 }
@@ -162,6 +163,30 @@ footer{
 	background-size: cover;
 }
 
+button{
+	border: none;
+	width: 400px;
+	background-color: transparent;
+	font-size: 50px;
+	font-family: Inter, Sans-serif;
+	font-weight: 600;
+	color:white;
+	text-shadow: 2px 2px 5px black;
+	
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+	transition-delay: 0s;
+
+
+}
+button:hover {
+	transform: scale(1.2);
+	
+
+	
+}
+
 
 
 
@@ -181,6 +206,22 @@ footer{
 	line-height: 32px;
 
 }
+
+.hidden{
+	opacity:0;
+	transition: all 1s;
+}
+.show{
+	opacity: 1;
+}
+#imagegrow{
+	width: 1100px;
+}
+
+.resizing{
+	width: 2px;
+}
+
 @media (max-width: 340px){
 	body{
 		width: 300px;
