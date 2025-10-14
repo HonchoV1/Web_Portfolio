@@ -9,65 +9,85 @@
 <script src="js/fade.js" defer></script>
 <script src="js/resize.js" defer></script>
 </head>
-	
-<header class="my_header">
-	
-	</header>
-	
+		
 <body>
 	
 	<header class ="my_header">
-	  <nav>Content for New nav Tag Goes Here</nav>
+	  <nav class="nav_bar">
+		  <button> <img src="img/submark.png" alt="sub mark logo"> </button>
+		   <button> Works </button>
+		   <button> Styles </button>
+		   <button> About </button>
+		  <button> <img src="img/hamburger_menu.png" alt="menu on top right"> </button>
+		</nav>
     </header>
 
 <main>
 	<section class="landing_page">
 	  <!-- landing page with logo and works after -->
-	  <div>
+	  <div class="landing_logos">
 	    <h4>The perfect eye for design</h4>
 	    <img src="img/main_logo.png" alt="my logo" >
 	    <h2> Holden Dipietro</h2>
       </div>
-	  <img src="img/works_banner.png" alt="works section">
-	  <div id="work_carousel">
+	<div class = "works_page">
+	  <img src="img/works_banner.png" alt="works section" class="hidden">
+		<div class="left_right_buttons">
+			<button><img src="img/button_left.png" alt = "left button" ></button>
+			<button><img src="img/button_right.png" alt = "right button"></button> 
+		</div>
+	
+	<div class="container">
+	<input type="radio" name="position"/>
+	<input type="radio" name="position" checked/>
+	<input type="radio" name="position"/>
+	  	<div id="work_carousel">
 	    <!-- box for works to swap between -->
-	    <div class="work_item">
-	      <h3> baseball cards</h3>
-	      <img src="img/baseball_cards.png" alt="baseball cards"></div>
-	    <div class="work_item"> </div>
-	    <div class="work_item"> </div>
-	    <div class="work_item"> </div>
-	    <div class="work_item"> </div>
-	    <div class="work_item"> </div>
-      </div>
-	  <div></div>
+			<div class="work_item">
+			  <h3> baseball cards</h3>
+			  <img src="img/baseball_cards.png" alt="baseball cards"></div>
+			<div class="work_item"> 
+				<h3> Esport Logo</h3>
+			  <img src="img/esports_logo.png" alt="esports"></div>
+			<div class="work_item"> 	
+				<h3> Mural</h3>
+			  <img src="img/mural.png" alt="mural card"></div>
+			<div class="work_item"> </div>
+			<div class="work_item"> </div>
+			<div class="work_item"> </div>
+      	</div>
+		</div>
+		</div>
+		
   </section>
 	<section>
 	  <!-- style section with container with clickable options -->
 		<div class="style_page">
 			<div class="style_box"> 
-				<img src="img/style_box.png" alt="pink border for work styles" id="imagegrow"> 
-				<div class="style_items hidden">
-					<div class="style_vector">  <button> Vector </button> </div>
-					<div class="style_group">
-						<div class="style_layout"> <button> Layouts </button> </div>
-						<div class="style_illustration"> <button> Illustrations </button> </div>
+				<img src="img/style_box.png" alt="pink border for work styles" class="imagegrow"> 
+				<div class="style_items hidden"> <!-- container for the text buttons for each section -->
+					<div class="style_vector">  <button class="grow_button"> Vector </button> </div> <!-- Vector button -->
+					<div class="style_group"> <!-- container so that the layout and illustration boxes can fit in the same row as "Vector" -->
+						<div class="style_layout"> <button class="grow_button"> Layouts </button> </div> <!-- Layouts button -->
+						<div class="style_illustration"> <button class="grow_button"> Illustrations </button> </div> <!-- illustration button -->
 					</div>
-					<div class="style_motion"> <button> Motion Graphics </button> </div>
-					<div class="style_photography"> <button> Photography </button> </div>
-					<div class="style_web"> <button> Web </button> </div>
+					<div class="style_motion"> <button class="grow_button"> Motion Graphics </button> </div>
+					<div class="style_photography"> <button class="grow_button"> Photography </button> </div>
+					<div class="style_web"> <button class="grow_button"> Web </button> </div>
 				</div>				
-			</div>
-			<img src= "img/green_background.png" alt="green background">
-		
+			</div>	
 		</div>
   </section>
 	
 <section> <!-- about section -->
 	<div class="about_page">
-	<img src="img/main_logo.png" alt="logo">
+	<h2> About Me</h2>
+		<div class="about_info hidden">
+		<img src="img/main_logo.png" alt="logo">
+		<div class="about_me"> <p>I am a graphic designer fresh out of St Clair College and ready to  take on the world of graphic design. Holden has worked professionally with a  production company in Windsor to deliver desired vector border graphics to clients  and more via freelance. As well as working with motion graphics and film through  personal web videos in order to deliver information in the most interesting way as  possible. Fluently working between Adobe’s editing and art software as a jack of all trades to create vector graphics, video and web design. With an eye for design and head filled with ideas there’s no shortage of energy there to create.</p></div>
+		</div>
 	</div>
-	</section>
+</section>
 
 </main>
 	

@@ -17,24 +17,35 @@
 
 
 //function isInViewport(element){
-//	const rect = element.getBoundingClientRect();
-//	return rect.top <= window.innerHeight && rect.bottom >= 0;
-//}
-//
-//function handleScroll(){
-//	const elements = document.querySelectorAll('imagegrow');
-//	elements.forEach((el) => {
-//		if (isInViewport (el)){
-//			el.classList.add("resize");
-//		} else{
-//			el.classList.remove("resize");
-//		}
-//	});
-//}
-//
-//window.addEventListener('scroll', handleScroll);
-//window.addEventListener('load', handleScroll);
+function isInViewport(element){
+	const rect = element.getBoundingClientRect();
+	return rect.top <= window.innerHeight && rect.bottom >= 0;
+}
 
+function imageScroll(){
+	const elements = document.querySelectorAll('.hidden');
+	elements.forEach((el) => {
+		if (isInViewport (el)){
+			el.classList.add("show");
+		} 
+	});
+}
+
+function handleScroll(){
+	const elements = document.querySelectorAll('.imagegrow');
+	elements.forEach((el) => {
+		if (isInViewport (el)){
+			el.classList.add("resizing");
+		}
+	});
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
+
+
+window.addEventListener('scroll', imageScroll);
+window.addEventListener('load', imageScroll);
 
 
 
