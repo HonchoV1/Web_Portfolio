@@ -79,6 +79,11 @@ footer{
 .works_page{
 	margin-top: 250px;
 }
+
+.work_banner{
+	margin-bottom: -100px;
+}
+
 .left_right_buttons{
 	position: absolute;
 	top: 50%;
@@ -106,12 +111,11 @@ footer{
 #work_carousel{
 	grid-row: 1/2;
 	grid-column: 1/8;
-	width: 100vw;
+	width: 100%;
 	height: 600px;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-/*	overflow: hidden;*/
+	overflow: hidden;
 	transform-style: preserve-3d;
 	perspective: 600px;
 	--items: 3;
@@ -123,7 +127,7 @@ footer{
 
 .work_item{
 	text-align: center;
-	padding: 20px;
+
 	border: 3px solid black;
 	position: absolute;
 	width: 500px;
@@ -131,22 +135,23 @@ footer{
 	--r: calc(var(--position) - var(--offset));
 	--abs: max(calc(var(--r) * -1), var(--r));
 	transition: all 0.25s linear;
-	transform: rotateY(calc(0deg * var(--r))) translateX(calc(-400px * var(--r)));
+	transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-550px * var(--r)));
 	z-index: calc((var(--position) - var(--abs)));
+
 }
 .work_item img{
-	width: 300px;
+	width: 400px;
 }
 .work_item:nth-child(1){ /* baseball child*/
-	--offset: 0;
+	--offset: 1;
 	
 }
 .work_item:nth-child(2){ /*esports logo */
-	--offset: 1;
+	--offset: 2; 
 }
 
 .work_item:nth-child(3){ /* mural */
-	--offset: 2;
+	--offset: 3;
 }
 
 input:nth-of-type(1){
@@ -171,6 +176,7 @@ input:nth-of-type(3){
 }
 input:nth-of-type(3):checked ~ #work_carousel{
 	--position: 3;
+	
 }
 
 
