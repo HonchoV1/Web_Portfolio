@@ -4,60 +4,53 @@
 <meta charset="utf-8">
 <title>Holden's Portfolio</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-<script src="js/fade.js" defer></script>
-<script src="js/resize.js" defer></script>
+<script src="js/fade.js" defer></script> 
 </head>
 		
 <body>
 	
-	<header class ="my_header">
-	  <nav class="nav_bar">
+	<header class ="my_header"> <!-- header container for the top -->
+	  <nav class="nav_bar"> <!--- navigation bar that contains menu options and other buttons -->
 		  <button> <img src="img/submark.png" alt="sub mark logo"> </button>
-		   <button> Works </button>
-		   <button> Styles </button>
-		   <button> About </button>
+		   <button class="underline"> Works </button>
+		   <button  class="underline"> Styles </button>
+		   <button  class="underline"> About </button>
 		  <button> <img src="img/hamburger_menu.png" alt="menu on top right"> </button>
 		</nav>
     </header>
 
-	<main>
+	<main> <!-- landing page with logo and works right after -->
 		<section class="landing_page">
-<!--		   landing page with logo and works after -->
 		  <div class="landing_logos">
 			<h4>The perfect eye for design</h4>
-			<img src="img/main_logo.png" alt="my logo" >
+			<img src="img/main_logo.png" alt="my logo" > 
 			<h2> Holden Dipietro</h2>
 		  </div>
-		<div class = "works_page">
+		<div class = "works_page"> <!-- works section -->
 		  <img src="img/works_banner.png" alt="works section" class="work_banner hidden">
-			<div class="container">
-			<input type="radio" name="position"/>
-			<input type="radio" name="position" checked/>
-			<input type="radio" name="position"/>
-				<div id="work_carousel">
-	<!--			 box for works to swap between -->
-					<div class="work_item">
-					  <h3> Baseball Cards</h3>
-					  <img src="img/baseball_cards.png" alt="baseball cards"></div>
-					<div class="work_item"> 
-						<h3> Esport Logo</h3>
-					  <img src="img/esports_logo.png" alt="esports"></div>
-					<div class="work_item"> 	
-						<h3> Mural</h3>
-					  <img src="img/mural.png" alt="mural card"></div>
-
+			<input type="radio" name="position"/> <!-- input to switch between works -->
+			<input type="radio" name="position" checked/> <!-- input to switch between works that is already selected -->
+			<input type="radio" name="position"/> <!-- input to switch between works -->
+				<div id="work_carousel"> <!-- box for works to swap between -->
+					<div class="work_item"><!-- Baseball card item -->
+						<h3> Baseball Cards</h3><!-- Title -->
+						<img src="img/baseball_cards.png" alt="baseball cards">  <!-- image of work -->
+						<img src="img/shadow.png" alt="shadow for works"> <!-- shadow for work -->
 					</div>
-				<div class="left_right_buttons">
-					<button><img src="img/button_left.png" alt = "left button" class="left_button" ></button>
-					<button><img src="img/button_right.png" alt = "right button" class="right_button" ></button> 
+					<div class="work_item"><!-- Esports logo item --> 
+						<h3> Esport Logo</h3>
+						<img src="img/esports_logo.png" alt="esports">
+						<img src="img/shadow.png" alt="shadow for works">
+					</div>
+					<div class="work_item"> <!-- Mural item -->
+						<h3> Mural</h3>
+						<img src="img/mural.png" alt="mural card">
+						<img src="img/shadow.png" alt="shadow for works">
+					</div>
 				</div>
-				</div>
-			</div>
-
-	  </section>
-		<section>
+		</div>
+	</section>
+	<section>
 		  <!-- style section with container with clickable options -->
 			<div class="style_page">
 					<img src="img/style_box.png" alt="pink border for work styles" class="hidden"> 
@@ -67,9 +60,9 @@
 							<div class="style_layout"> <button class="grow_button"> Layouts </button> </div> <!-- Layouts button -->
 							<div class="style_illustration"> <button class="grow_button"> Illustrations </button> </div> <!-- illustration button -->
 						</div>
-						<div class="style_motion"> <button class="grow_button"> Motion Graphics </button> </div>
-						<div class="style_photography"> <button class="grow_button"> Photography </button> </div>
-						<div class="style_web"> <button class="grow_button"> Web </button> </div>
+						<div class="style_motion"> <button class="grow_button"> Motion Graphics </button> </div> <!-- motion graphics button -->
+						<div class="style_photography"> <button class="grow_button"> Photography </button> </div> <!-- photography button -->
+						<div class="style_web"> <button class="grow_button"> Web </button> </div> <!-- web button -->
 					</div>				
 			</div>
 	  </section>
@@ -77,26 +70,24 @@
 	<section> <!-- about section -->
 		<div class="about_page">
 		<h2> About Me</h2>
-			<div class="about_info hidden">
+			<div class="about_info hidden">  <!-- flex container to push objects ina  row -->
 			<img src="img/main_logo.png" alt="logo">
 			<div class="about_me"> <p>I am a graphic designer fresh out of St Clair College and ready to  take on the world of graphic design. Holden has worked professionally with a  production company in Windsor to deliver desired vector border graphics to clients  and more via freelance. As well as working with motion graphics and film through  personal web videos in order to deliver information in the most interesting way as  possible. Fluently working between Adobe’s editing and art software as a jack of all trades to create vector graphics, video and web design. With an eye for design and head filled with ideas there’s no shortage of energy there to create.</p></div>
 			</div>
 		</div>
 	</section>
-
 	</main>
-
-	<footer>
+	<footer> <!-- footer for end of page -->
 		<img src="img/logotype.png" alt="logotype logo">
-		<div class="footer_text">
+		<div class="footer_text"> <!-- contact info -->
 			<h3>Contact</h3>
-			<p>holdendip@gmail.com</p>
+			<button class="footer_button underline">holdendip@gmail.com</button>
 		</div>
-		<div class="footer_text">
+		<div class="footer_text"> <!-- social media links -->
 			<h3>Socials</h3>
-			<p>Twitter</p>
-			<p>Linkdin</p>
-			<p>Instagram</p>
+			<button class="footer_button underline">Twitter</button>
+			<button class="footer_button underline">Linkdin</button>
+			<button class="footer_button underline">Instagram</button>
 		</div>
 
 		</footer>

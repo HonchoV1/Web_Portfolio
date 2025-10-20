@@ -79,37 +79,16 @@ footer{
 
 .works_page{
 	margin-top: 250px;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
 }
 
 .work_banner{
 	margin-bottom: -100px;
 }
 
-.left_right_buttons{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 1300px;
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	margin-top: 600px;
-}
-
-.container{
-	height: 800px;
-/*
-	display: grid;
-	grid-template-rows: 500px 400px;
-	grid-template-columns: 1fr 30px 30px 30px 1fr;
-*/
-	align-items: center;
-	justify-content: center;
-	
-}
-
-#work_carousel{
+#work_carousel{ /*container for carousel*/
 	grid-row: 1/2;
 	grid-column: 1/8;
 	width: 100%;
@@ -122,20 +101,19 @@ footer{
 	--items: 3;
 	--middle: 2;
 	--position: 1;
-	--carousel-opacity: 0.5;
 	pointer-events: none;
 }
 
 
-.work_item{
+.work_item{ /*container for item*/
 	text-align: center;
 	position: absolute;
-	width: 500px;
-	height: 450px;
+	width: 370px;
+	height: 550px;
 	--r: calc(var(--position) - var(--offset));
 	--abs: max(calc(var(--r) * -1), var(--r));
-	transition: all 0.25s linear;
-	transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-550px * var(--r)));
+	transition: all 0.25s linear; /*smooht transition*/
+	transform: rotateY(calc(-15deg * var(--r))) translateX(calc(-550px * var(--r))); /*angle and distance for work items */
 	z-index: calc((var(--position) - var(--abs)));
 	
 }
@@ -153,8 +131,12 @@ footer{
 	--offset: 3;
 	
 }
-.work-item:nth-child(1).active{
-	opacity:1
+input{
+	width: 120px;
+	height: 40px;
+}
+input[type='radio']{
+	accent-color: #CAE62E;
 }
 
 input:nth-of-type(1){
@@ -164,6 +146,7 @@ input:nth-of-type(1){
 }
 input:nth-of-type(1):checked ~ #work_carousel{
 	--position: 1;
+	
 }
 
 input:nth-of-type(2){
@@ -181,9 +164,6 @@ input:nth-of-type(3){
 }
 input:nth-of-type(3):checked ~ #work_carousel{
 	--position: 3;
-	
-	
-	
 }
 
 
@@ -210,7 +190,6 @@ input:nth-of-type(3):checked ~ #work_carousel{
 	gap: 1em;
 	
 }
-
 
 .style_vector{
 	width: 440px;
@@ -298,16 +277,13 @@ button{
 	transition-duration: 0.5s;
 	transition-timing-function: ease;
 	transition-delay: 0s;
-
-
 }
 .grow_button:hover {
 	transform: scale(1.2);
-	
-
-	
 }
-
+.underline:hover{
+	text-decoration-line: underline;
+}
 
 .about_page{
 	height: 1009px;
@@ -347,9 +323,15 @@ button{
 }
 
 .footer_text{
-	text-align: center;
-	line-height: 32px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: 20px;
 
+}
+.footer_button{
+	font-size: 25px;
+	margin: 10px;
 }
 
 .hidden{
@@ -363,10 +345,6 @@ button{
 .imagegrow{
 	width: 0px;
 	transition: all 1.2s;
-}
-
-.resizing{
-	width: 1066px;
 }
 
 @media (max-width: 393px){
@@ -443,10 +421,11 @@ button{
 }
 	.work_banner{
 		width: 393px;
-		margin-bottom: -10px;
+		margin-bottom: -30px;
 	}
-	.container{
-	height: 400px;
+	input{
+	width: 40px;
+	height: 20px;
 }
 
 #work_carousel{
@@ -481,9 +460,6 @@ button{
 .work_item img{
 	width: 150px;
 }
-	
-	
-	
 	
 .style_page{ 
 	height: 440px;
@@ -576,7 +552,6 @@ button{
 	text-indent: 4ch;
 	}
 	
-	
 footer{
 	display: flex;
 	justify-content: space-evenly;
@@ -588,17 +563,26 @@ footer{
 	height: 137px;
 }
 	footer img{
-		width: 40%;
+		width: 35%;
 	}
 	footer h3{
 		font-size: 11px;
-	}
-	footer p{
-		font-size: 9px;
+		text-decoration-line: underline;
+		text-underline-offset: 5px;
 	}
 	
 	.footer_text{
-	text-align: center;
-	line-height: 12px;
-	}
+	width: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	line-height: 0px;
+	margin: 10pz;
+
+}
+.footer_button{
+	font-size: 8px;
+	margin: 4px;
+}
 }
